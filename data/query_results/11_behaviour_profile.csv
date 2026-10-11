@@ -1,0 +1,11 @@
+behaviour_profile,closed_deals,pct_of_closed,avg_days_to_close
+cat,407,48.3,40.8
+Not Provided,177,21.0,39.4
+eagle,123,14.6,36.0
+wolf,95,11.3,83.9
+shark,24,2.9,75.4
+"cat, wolf",8,1.0,185.8
+"eagle, wolf",3,0.4,149.3
+"eagle, cat",3,0.4,199.0
+"shark, wolf",1,0.1,341.0
+"shark, cat",1,0.1,181.0

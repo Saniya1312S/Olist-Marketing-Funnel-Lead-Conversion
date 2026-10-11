@@ -1,0 +1,32 @@
+table,column,data_type,description
+olist_marketing_qualified_leads_dataset,mql_id,Text (ID),Unique ID of the lead (a business that showed interest); links to closed deals
+olist_marketing_qualified_leads_dataset,first_contact_date,Date,Date the lead first made contact; start of the sales clock
+olist_marketing_qualified_leads_dataset,landing_page_id,Text (ID),Landing page the lead signed up on
+olist_marketing_qualified_leads_dataset,origin,Text,"Marketing channel the lead came from (organic_search, paid_search, social, email, unknown, ...). Blank for 60 leads"
+olist_closed_deals_dataset,mql_id,Text (ID),Lead ID; one to one with the MQL table
+olist_closed_deals_dataset,seller_id,Text (ID),Seller account created after the deal was won
+olist_closed_deals_dataset,sdr_id,Text (ID),Sales Development Representative on the deal
+olist_closed_deals_dataset,sr_id,Text (ID),Sales Representative who closed the deal
+olist_closed_deals_dataset,won_date,Date-time,When the deal was won; end of the sales clock
+olist_closed_deals_dataset,business_segment,Text,Product category the seller will sell
+olist_closed_deals_dataset,lead_type,Text,"Kind of seller (online_medium, industry, offline, ...)"
+olist_closed_deals_dataset,lead_behaviour_profile,Text,"Behaviour persona (cat, eagle, wolf, shark). Blank for 21% of deals; some deals have two"
+olist_closed_deals_dataset,has_company,Boolean,Questionnaire answer; about 92% blank (blank = not answered)
+olist_closed_deals_dataset,has_gtin,Boolean,Questionnaire answer; about 92% blank
+olist_closed_deals_dataset,average_stock,Text,Questionnaire answer; about 92% blank
+olist_closed_deals_dataset,business_type,Text,"reseller, manufacturer or other"
+olist_closed_deals_dataset,declared_product_catalog_size,Number,Questionnaire answer; about 92% blank
+olist_closed_deals_dataset,declared_monthly_revenue,Number,"Declared monthly revenue; 0 for 95% of deals, so not used"
+closed_deals_clean,won_day,Date,Created: won_date without the time part (so it can be compared with first_contact_date)
+lead_master,first_contact_month,Text,Year-month of first contact (the monthly cohort)
+lead_master,origin,Text,Channel; blank origin labelled not_provided (kept separate from the recorded value unknown)
+lead_master,conversion_status,Text,"Converted if the lead has a closed-deal record, otherwise Not Converted"
+lead_master,converted_flag,1/0,1 if converted; its average is the conversion rate
+lead_master,won_day,Date,Date the deal was won
+lead_master,won_month,Text,Year-month the deal was won
+lead_master,days_to_close,Number,won_day minus first_contact_date; blank if not converted or if the date gap is negative (1 deal)
+lead_master,lead_type / business_segment / behaviour_profile / business_type,Text,Closed-deal details; Not Provided when missing; blank for leads that did not close
+lead_master,closed_within_30d,1/0,Created: 1 if the deal closed within 30 days of first contact (fair like-for-like measure)
+lead_master,cohort_period,Text,Created: Jun-Dec 2017 (before deal recording starts) or Jan-May 2018 (comparable window)
+lead_master,days_band,Text,"Created: 0-7 days, 8-30 days, 31-90 days, Over 90 days"
+lead_master,conv_rate_basis,1/0,Created: copy of converted_flag used by a PivotTable to show the conversion rate
