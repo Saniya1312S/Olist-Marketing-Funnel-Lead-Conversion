@@ -290,4 +290,4 @@ Olist-Marketing-Funnel-Lead-Conversion/
 
 ---
 
-<p align="center"><i>Dataset: Olist (Kaggle). Analysis and documentation by [Your Name].</i></p>
+
