@@ -199,11 +199,8 @@ No rows were deleted.
 
 ## Dashboard
 
-The dashboard is an Excel workbook ([`excel/Olist_Funnel_Dashboard.xlsx`](excel/Olist_Funnel_Dashboard.xlsx)). Every number on it is a live formula, and it reads like a one-page report:
+The dashboard is an Excel workbook ([`excel/Olist_Funnel_Dashboard.xlsx`](excel/Olist_Funnel_Dashboard.xlsx)). 
 
-<p align="center">
-  <img src="excel/dashboard_screenshot.png" width="72%" alt="Full Excel dashboard">
-</p>
 
 | Part of the dashboard | What it answers |
 |---|---|
