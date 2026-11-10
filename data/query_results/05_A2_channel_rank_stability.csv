@@ -1,0 +1,10 @@
+origin,leads,conv_all_months_pct,conv_jan_may_pct,rank_all_months,rank_jan_may
+unknown,1099,16.3,20.7,1,1
+paid_search,1586,12.3,14.8,2,2
+organic_search,2296,11.8,14.7,3,3
+direct_traffic,499,11.2,14.2,4,4
+referral,284,8.5,11.4,5,5
+display,118,5.1,6.7,7,6
+social,1350,5.6,6.3,6,7
+email,493,3.0,4.0,8,8
+other,150,2.7,3.5,9,9

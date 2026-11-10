@@ -1,0 +1,4 @@
+cohort_period,deals,average_days,median_days,p25_days,p75_days,p90_days,pct_over_90_days
+All months,841,48.5,14.0,5,55,162,17.8
+Jan-May 2018,780,35.7,12.5,5,38,111,13.2
+Jun-Dec 2017,61,212.2,216.0,127,321,341,77.0

@@ -1,0 +1,12 @@
+origin,leads,deals,conversion_rate_pct,share_of_leads_pct,share_of_deals_pct,gap_in_share_pts
+social,1350,75,5.6,16.9,8.9,-8.0
+email,493,15,3.0,6.2,1.8,-4.4
+other,150,4,2.7,1.9,0.5,-1.4
+display,118,6,5.1,1.5,0.7,-0.8
+referral,284,24,8.5,3.6,2.9,-0.7
+other_publicities,65,3,4.6,0.8,0.4,-0.5
+direct_traffic,499,56,11.2,6.2,6.7,0.4
+not_provided,60,14,23.3,0.8,1.7,0.9
+paid_search,1586,195,12.3,19.8,23.2,3.3
+organic_search,2296,271,11.8,28.7,32.2,3.5
+unknown,1099,179,16.3,13.7,21.3,7.5

@@ -1,0 +1,13 @@
+segment_rank,business_segment,deals,pct_of_deals,cumulative_pct
+1,home_decor,105,12.5,12.5
+2,health_beauty,93,11.0,23.5
+3,car_accessories,77,9.1,32.7
+4,household_utilities,71,8.4,41.1
+5,construction_tools_house_garden,69,8.2,49.3
+6,audio_video_electronics,64,7.6,56.9
+7,computers,34,4.0,60.9
+8,pet,30,3.6,64.5
+9,food_supplement,28,3.3,67.8
+10,food_drink,26,3.1,70.9
+11,sports_leisure,25,3.0,73.9
+12,bags_backpacks,22,2.6,76.5

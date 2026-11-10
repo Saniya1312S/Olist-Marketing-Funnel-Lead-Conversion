@@ -1,0 +1,12 @@
+origin,leads,conv_pct,overall_pct,suggested_action
+organic_search,1736,14.7,13.0,SCALE (big and converts)
+paid_search,1182,14.8,13.0,SCALE (big and converts)
+social,1051,6.3,13.0,REVIEW QUALITY (big but weak)
+unknown,813,20.7,13.0,"FIX TRACKING (converts well, source hidden)"
+direct_traffic,380,14.2,13.0,SCALE (big and converts)
+email,347,4.0,13.0,REVIEW QUALITY (big but weak)
+referral,211,11.4,13.0,WATCH (small channel)
+other,114,3.5,13.0,WATCH (small channel)
+display,75,6.7,13.0,WATCH (small channel)
+not_provided,48,27.1,13.0,"FIX TRACKING (converts well, source hidden)"
+other_publicities,41,7.3,13.0,WATCH (small channel)

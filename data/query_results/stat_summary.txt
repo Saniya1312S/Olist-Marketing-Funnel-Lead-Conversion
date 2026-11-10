@@ -1,0 +1,52 @@
+Leads: 8,000 | Closed deals: 842 | Overall conversion: 10.5% | Jan-May 2018 conversion: 13.0%
+
+CHI-SQUARE: origin vs sign-up  [all months]
+chi2 = 140.7, dof = 10, p-value = 3.05e-25, Cramer's V = 0.13, cells with expected count < 5: 0
+
+CHI-SQUARE: origin vs sign-up  [Jan-May 2018 only]
+chi2 = 138.8, dof = 10, p-value = 7.57e-25, Cramer's V = 0.15, cells with expected count < 5: 0
+Meaning: p < 0.05 -> sign-up rate differs by channel by more than chance would explain.
+Cramer's V = HOW STRONG the link is (0 = none, 1 = perfect). Around 0.1-0.15 is a modest effect: the channel gap is real, but channel is not the only thing that drives sign-up.
+
+CONVERSION RATE WITH 95% CONFIDENCE INTERVAL (left: all months | right: Jan-May 2018)
+           origin  leads conversion_rate ci_low_95 ci_high_95 conversion_rate_jan_may ci_low_95_jan_may ci_high_95_jan_may
+   organic_search   2296           11.8%     10.5%      13.2%                   14.7%             13.1%              16.4%
+      paid_search   1586           12.3%     10.8%      14.0%                   14.8%             12.9%              16.9%
+           social   1350            5.6%      4.5%       6.9%                    6.3%              5.0%               7.9%
+          unknown   1099           16.3%     14.2%      18.6%                   20.7%             18.0%              23.6%
+   direct_traffic    499           11.2%      8.7%      14.3%                   14.2%             11.1%              18.1%
+            email    493            3.0%      1.9%       5.0%                    4.0%              2.4%               6.7%
+         referral    284            8.5%      5.7%      12.3%                   11.4%              7.8%              16.4%
+            other    150            2.7%      1.0%       6.7%                    3.5%              1.4%               8.7%
+          display    118            5.1%      2.4%      10.7%                    6.7%              2.9%              14.7%
+other_publicities     65            4.6%      1.6%      12.7%                    7.3%              2.5%              19.4%
+     not_provided     60           23.3%     14.4%      35.4%                   27.1%             16.6%              41.0%
+Meaning: if two channels' intervals do not overlap, the gap is unlikely to be luck. Wide intervals (few leads) mean 'be careful'.
+
+SEARCH vs SOCIAL+EMAIL (the headline comparison)
+[all months] Search: 466/3882 = 12.0% (11.0% to 13.1%) | Social+Email: 90/1843 = 4.9% (4.0% to 6.0%) | chi2 = 72.3, p = 1.88e-17
+[Jan-May 2018] Search: 430/2918 = 14.7% (13.5% to 16.1%) | Social+Email: 80/1398 = 5.7% (4.6% to 7.1%) | chi2 = 73.7, p = 9.12e-18
+
+DAYS TO CLOSE (closed deals only, 841 valid)
+mean = 48.5 | median = 14 | skew = 2.29 | P25 = 5 | P75 = 55 | P90 = 162
+IQR outlier fence = 130 days -> 105 deals (12.5%) are slow outliers. They are real deals, so they are kept and reported separately, not deleted.
+Why median: a few very slow deals pull the mean up (right-skew); the median shows the typical deal.
+
+IS THE SLOW TAIL REAL? Days to close by the period the lead first made contact
+All months             deals = 841 | mean =  48.5 | median =  14.0 | closed within 30 days = 65.9% | over 90 days = 17.8%
+Jan-May 2018 (fair)    deals = 780 | mean =  35.7 | median =  12.5 | closed within 30 days = 70.6% | over 90 days = 13.2%
+Jun-Dec 2017           deals =  61 | mean = 212.2 | median = 216.0 | closed within 30 days = 4.9% | over 90 days = 77.0%
+Meaning: deal recording starts in Dec 2017, so a Jun-Nov 2017 lead only shows up if it closed LATE (median 216 days). That small group inflates the all-months average. Use the Jan-May 2018 numbers for planning. Both views are reported.
+Caution: only CLOSED deals are measured. Leads still open when the data ends are invisible, so the true sales cycle is probably a little longer (right-censoring).
+
+BEHAVIOUR PROFILE vs DAYS TO CLOSE (single profiles only)
+cat    deals = 406 | median =  13.0 | mean =  40.8
+eagle  deals = 123 | median =  10.0 | mean =  36.0
+wolf   deals =  95 | median =  36.0 | mean =  83.9
+shark  deals =  24 | median =  13.5 | mean =  75.4
+Mann-Whitney wolf vs cat: p = 6.7e-05 | Kruskal-Wallis across 4 profiles: p = 4.9e-05
+Meaning: wolf deals are slower by more than chance. Non-parametric tests are used because days-to-close is skewed (not bell-shaped).
+
+MAY 2018 DIP: channel mix or something else?
+May 2018 actual conversion = 10.0% | expected if every channel converted like Jan-Apr = 13.4%
+Meaning: the dip is NOT explained by channel mix. It shows up in most channels and is still visible after 60-90 days (see sql/05 query A5). Ask the data owner whether deals from May leads were still being logged.
